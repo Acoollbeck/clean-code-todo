@@ -9,6 +9,11 @@ export default defineConfig([
     plugins: {
       js,
     },
+    rules: {
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'no-console': 'error',
+    },
     extends: ['js/recommended', eslintConfigPrettier],
     languageOptions: {
       globals: globals.browser,
