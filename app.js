@@ -114,16 +114,10 @@ const taskIncomplete = function () {
   bindTaskEvents(listItem, taskCompleted);
 };
 
-// const ajaxRequest = function () {
-//     console.log("AJAX Request");
-// }
-
 //The glue to hold it all together.
 
 //Set the click handler to the addTask function.
-addButton.onclick = addTask;
 addButton.addEventListener('click', addTask);
-// addButton.addEventListener("click", ajaxRequest);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   //select ListItems children
@@ -140,17 +134,9 @@ const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
 };
 
 //cycle over incompleteTaskHolder ul list items
-//for each list item
-for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
-  //bind events to list items chldren(tasksCompleted)
-  bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
-}
+// for each list item
 
-//cycle over completedTasksHolder ul list items
-for (let i = 0; i < completedTasksHolder.children.length; i++) {
-  //bind events to list items chldren(tasksIncompleted)
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
-}
+// //cycle over completedTasksHolder ul list items
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
